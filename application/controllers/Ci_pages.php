@@ -46,7 +46,7 @@
                 'status'           => $status,
                 'show_hiden'       => $show_hiden
               );
-             
+
               $this->db->insert('pages', $data);
               if ($this->db->trans_status() === TRUE)
               {
@@ -130,7 +130,7 @@
           {
             redirect('ci-admin/pages');
           }
-  
+
         }
         else if(isset($_POST['btnBackPage']))
         {
@@ -221,7 +221,7 @@
               'description'     => $description,
               'keyword'         => $keyword,
               'status'          => $status
-             
+
             );
             $this->db->insert('content_page', $data);
             if ($this->db->trans_status() === TRUE)
@@ -239,7 +239,7 @@
             $data_pages = $this->Pages->show();
             $this->template->load('layout', 'contents' , 'ci-admin/pages/createpagecontent.php',array('csrf'=>$this->csrf,'pages'=>$data_pages));
         }
-        
+
     }
     public function PagesContentEdit($id)
     {
@@ -249,13 +249,13 @@
             'br3' => array('name' => 'edit pages contents'),
          );
          /**
-          * 
+          *
         */
         if(isset($_POST['btnEditContentPage']))
         {
             $name           =  $this->security->xss_clean($this->input->post('name'));
             $idPage         =  $this->security->xss_clean($this->input->post('idPage'));
-            $content        =  $this->security->xss_clean($this->input->post('content'));
+            $content        =  htmlspecialchars_decode($this->security->xss_clean(htmlentities($this->input->post('content'))));
             $description    =  $this->security->xss_clean($this->input->post('description'));
             $keyword        =  $this->security->xss_clean($this->input->post('keyword'));
             $status         =  $this->security->xss_clean($this->input->post('status'));
@@ -267,9 +267,9 @@
               'description'     => $description,
               'keyword'         => $keyword,
               'status'          => $status
-             
+
             );
-            
+
             $this->db->where('id', $this->security->xss_clean($this->input->post('id')));
             $this->db->update('content_page', $data);
             $this->db->trans_complete();

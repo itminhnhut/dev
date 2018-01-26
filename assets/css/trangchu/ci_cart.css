@@ -11,6 +11,22 @@ body {
     -moz-transition: opacity 0.24s ease-in-out;
     transition: opacity 0.24s ease-in-out
 }
+@font-face {
+    font-family: WooCommerce;
+    src: url(/assets/fonts/font/WooCommerce.eot)
+    ;
+    src: url(/assets/fonts/font/WooCommerce.eot-#iefix)
+
+    format("embedded-opentype"), url(/assets/fonts/font/WooCommerce.woff)
+
+    format("woff"), url(/assets/fonts/font/WooCommerce.ttf)
+
+    format("truetype"), url(/assets/fonts/font/WooCommerce.svg#WooCommerce)
+
+    format("svg");
+    font-weight: 400;
+    font-style: normal
+}
 .wf-loading body,
 {
     opacity: 0
@@ -157,8 +173,73 @@ body {
     color: #c38749;
     font-weight: 700;
 }
-
-.page-content { background-image: url('../../../assets/img/bk404.png')}
-.error-template {padding: 40px 15px;text-align: center;}
-.error-actions {margin-top:15px;margin-bottom:15px;}
-.error-actions .btn { margin-right:10px; }
+.main-container .page-content .entry-content .shop_table .tongtien .product-subtotal,
+.main-container .page-content .entry-content .shop_table .tongtien .product-thumbnail{
+    border: none;
+}
+.main-container .page-content .entry-content .shop_table .tongtien .tt{
+    border-left: 1px solid #d3d3d3;
+}
+.blog-page .pagination .page-numbers:before{
+    content: '';
+    clear: both;
+}
+.blog-page .pagination .page-numbers{
+    width: 10%;
+    margin:auto;
+    display: table;
+}
+.blog-page .pagination .page-numbers li{
+    list-style-type: none;
+    display: table-cell;
+}
+.page-numbers strong,.page-numbers a{
+    padding: 10px;
+}
+.woocommerce-message:after {
+    clear: both
+}
+.woocommerce-message {
+    padding: 1em 2em 1em 3.5em!important;
+    margin: 0 0 2em!important;
+    position: relative;
+    background-color: #f7f6f7;
+    color: #515151;
+    border-top: 3px solid #a46497;
+    list-style: none!important;
+    width: auto;
+    word-wrap: break-word;
+    display: none;
+}
+.woocommerce-message:after,
+.woocommerce-message:before {
+    content: " ";
+    display: table
+}
+.woocommerce-message:before {
+    font-family: WooCommerce;
+    content: "\e028";
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 1.5em
+}
+.woocommerce-message .button {
+    float: right
+}
+.woocommerce-message li {
+    list-style: none!important;
+    padding-left: 0!important;
+    margin-left: 0!important
+}
+.woocommerce-message {
+    border-top-color: #8fae1b
+}
+.woocommerce-message:before {
+    content: "\e015";
+    color: #8fae1b
+}
+.main-container .page-content .container .content_page{
+    max-width: 1000px;
+    margin: 10px auto;
+}

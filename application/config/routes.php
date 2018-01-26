@@ -133,14 +133,20 @@ $route['ci-admin/bill/view/(:num)'] = 'ci_bill/view/$1';
 $route['ci-admin/bill/prinfBill'] = 'ci_bill/prinfBill';
 /*font_end
 trang loại*/
+$route['product/(:any)'] = 'trangchu/trangloai/$1';
 $route['(:any)-(:num)'] = 'trangchu/trangloai/$1/$2';
 $route['(:any)-(:num)/(:num)'] = 'trangchu/trangloai/$1/$2';
 
-
 /*blog*/
-$route['blog/(:any).html'] = 'trangchu/blog_chitiet/$1/$2';
-$route['blog/(:any)/page/(:num)'] = 'trangchu/blog/$1/$2';
-$route['blog'] = 'trangchu/blog/$1';
+$route['tag/blog/(:any)/(:num)'] = 'trangchu/blog_chitiet/1$/$2';
+$route['tag/(:any)-(:num)/(:num)'] = 'trangchu/blog/$1/$2';
+$route['tag/(:any)-(:num)'] = 'trangchu/blog/$1/$2';
+
+/*pages*/
+$route['pages/(:any)-(:num)'] = 'trangchu/pages/$1/$2';
+
+/*trang chi tiết*/
+$route['detail/(:any)/(:num)'] = 'trangchu/trangchitiet/$1/$2';
 /**
  * cart
  */

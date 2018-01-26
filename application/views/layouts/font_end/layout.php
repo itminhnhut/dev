@@ -30,6 +30,9 @@
         background: none !important;
         padding: 0 !important
     }
+    .zoomContainer{ z-index: 9999 !important;}
+    .zoomWindow{ z-index: 9999 !important;}
+    #fbplus-content{width: 100%!important;height: auto!important;}
 </style>
 <style id='rs-plugin-settings-inline-css' type='text/css'>
 .tp-caption.roundedimage img {
@@ -237,8 +240,8 @@ body {
                                     <div class="global-row">
                                         <div class="global-cell">
                                             <div class="logo">
-                                                <a href="index.htm" tppabs="http://demo.roadthemes.com/maroko/" title="Maroko" rel="home">
-                                                    <img src="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/logo.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/logo.png" alt="" />
+                                                <a href="<?=base_url()?>" title="Maroko" rel="home">
+                                                    <img src="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/logo.png"/>
                                                 </a>
                                             </div>
                                         </div>
@@ -259,261 +262,59 @@ body {
                                                         </span>
                                                         <ul id="mega_main_menu_ul" class="mega_main_menu_ul">
                                                             <li id="menu-item-3265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1860 current_page_item menu-item-has-children first menu-item-3265 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                <a href="index.htm" tppabs="http://demo.roadthemes.com/maroko/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Home </span> </span>
-                                                                </a>
-                                                                <ul class="mega_dropdown">
-                                                                    <li id="menu-item-3264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3264 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                        <a href="index-5.htm" tppabs="http://demo.roadthemes.com/maroko/home-shop-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Home Shop 2 </span> </span>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li id="menu-item-3482" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3482 multicolumn_dropdown default_style drop_to_center submenu_default_width columns4">
-                                                                <a href="index-6.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Women </span> </span>
-                                                                </a>
-                                                                <ul class="mega_dropdown">
-                                                                    <li id="menu-item-3504" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3504 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:25%;">
-                                                                        <a href="index-7.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Accessories </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3505" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3505 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-8.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/baseball-caps/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Baseball Caps </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3506" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3506 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-9.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/gloves-mittens/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Gloves &#038; Mittens </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3507" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3507 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-10.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/skullies-beanies/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Skullies &#038; Beanies </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3509" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3509 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-11.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/sunglasses/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Sunglasses </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li id="menu-item-3510" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3510 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:25%;">
-                                                                        <a href="index-12.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Bags </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3511" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3511 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-13.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/backpacks-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Backpacks </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3512" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3512 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-14.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/bucket-bags-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Bucket Bags </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3513" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3513 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-15.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/bucket-bags-3/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Bucket Bags </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3514" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3514 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-16.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/clutches-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Clutches </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li id="menu-item-3515" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3515 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:25%;">
-                                                                        <a href="index-17.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> clothings </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3516" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3516 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-18.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/jackets-coats-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Jackets &#038; Coats </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3517" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3517 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-19.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/jeans-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Jeans </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3518" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3518 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-20.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/shorts-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Shorts </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3519" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3519 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-21.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/t-shirts-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> T-shirts </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li id="menu-item-3520" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3520 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:25%;">
-                                                                        <a href="index-22.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> shoes </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3521" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3521 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-23.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/pumps-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Pumps </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3522" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3522 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-24.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/sandals-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Sandals </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3523" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3523 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-25.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/sneakers-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Sneakers </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3524" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3524 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-26.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/wedges-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Wedges </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li id="menu-item-3488" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3488 multicolumn_dropdown default_style drop_to_center submenu_default_width columns3">
-                                                                <a href="index-27.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Men </span> </span>
-                                                                </a>
-                                                                <ul class="mega_dropdown">
-                                                                    <li id="menu-item-3489" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3489 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:33.3333333333%;">
-                                                                        <a href="index-28.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Bags </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3490" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3490 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-29.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/backpacks/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Backpacks </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3491" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3491 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-30.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/bucket-bags/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Bucket Bags </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3492" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3492 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-31.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/clutches/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Clutches </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3493" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3493 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-32.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/crossbody-bags/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Crossbody Bags </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li id="menu-item-3494" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3494 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:33.3333333333%;">
-                                                                        <a href="index-33.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> clothings </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3495" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3495 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-34.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/jackets-coats/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Jackets &#038; Coats </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3496" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3496 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-35.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/jeans/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Jeans </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3497" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3497 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-36.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/shorts/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Shorts </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3498" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3498 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-37.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/t-shirts/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> T-shirts </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li id="menu-item-3499" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3499 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:33.3333333333%;">
-                                                                        <a href="index-38.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Shoes </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3500" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3500 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-39.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/pumps/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Pumps </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3501" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3501 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-40.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/sandals/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Sandals </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3502" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3502 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-41.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/sneakers/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Sneakers </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3503" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3503 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-42.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/wedges/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Wedges </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li id="menu-item-3286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3286 multicolumn_dropdown default_style drop_to_center submenu_default_width columns3">
-                                                                <a href="index-43.htm" tppabs="http://demo.roadthemes.com/maroko/blog/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Blog </span> </span>
-                                                                </a>
-                                                                <ul class="mega_dropdown">
-                                                                    <li id="menu-item-3291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3291 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:33.3333333333%;">
-                                                                        <a href="#" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Blog Layouts </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3287 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="-layout=nosidebar.htm" tppabs="http://demo.roadthemes.com/maroko/blog/?layout=nosidebar" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> None Sidebar </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3289 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="-layout=sidebar&sidebar=left.htm" tppabs="http://demo.roadthemes.com/maroko/blog/?layout=sidebar&sidebar=left" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Sidebar Left </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3290 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="-layout=sidebar&sidebar=right.htm" tppabs="http://demo.roadthemes.com/maroko/blog/?layout=sidebar&sidebar=right" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Sidebar Right </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li id="menu-item-3292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3292 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:33.3333333333%;">
-                                                                        <a href="#" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Blog Paes </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3293 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-44.htm" tppabs="http://demo.roadthemes.com/maroko/author/admin/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Author </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3294 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-45.htm" tppabs="http://demo.roadthemes.com/maroko/2014/12/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Archive </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3295 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-46.htm" tppabs="http://demo.roadthemes.com/maroko/category/wordpress/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Category </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3296 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-47.htm" tppabs="http://demo.roadthemes.com/maroko/tag/travel-2/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Blog Tag </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li id="menu-item-3298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3298 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:33.3333333333%;">
-                                                                        <a href="#" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Post Formats </span> </span>
-                                                                        </a>
-                                                                        <ul class="mega_dropdown">
-                                                                            <li id="menu-item-3299" class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-3299 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-48.htm" tppabs="http://demo.roadthemes.com/maroko/type/audio/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Audio </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3300" class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-3300 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-49.htm" tppabs="http://demo.roadthemes.com/maroko/type/gallery/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Gallery </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3301" class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-3301 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-50.htm" tppabs="http://demo.roadthemes.com/maroko/type/image/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Image </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li id="menu-item-3302" class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-3302 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                                <a href="index-51.htm" tppabs="http://demo.roadthemes.com/maroko/type/video/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Video </span> </span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li id="menu-item-3304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3304 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                <a href="index-52.htm" tppabs="http://demo.roadthemes.com/maroko/about-us/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> About Us </span> </span>
+                                                                <a href="<?=base_url()?>" class="item_link  disable_icon">
+                                                                    <i class=""></i>
+                                                                    <span class="link_content">
+                                                                        <span class="link_text"> Home </span>
+                                                                    </span>
                                                                 </a>
                                                             </li>
-                                                            <li id="menu-item-3305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3305 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                <a href="index-53.htm" tppabs="http://demo.roadthemes.com/maroko/contact/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> Contact </span> </span>
-                                                                </a>
-                                                            </li>
-                                                            <li id="menu-item-3328" class="menu-item menu-item-type-post_type menu-item-object-page last menu-item-3328 default_dropdown default_style drop_to_right submenu_default_width columns1">
-                                                                <a href="index-54.htm" tppabs="http://demo.roadthemes.com/maroko/faqs/" class="item_link  disable_icon" tabindex="0"> <i class=""></i> <span class="link_content"> <span class="link_text"> FAQS </span> </span>
-                                                                </a>
-                                                            </li>
+                                                            <?php foreach ($menu as $val_menu): ?>
+                                                                <li id="menu-item-3482" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3482 multicolumn_dropdown default_style drop_to_center submenu_default_width columns4">
+                                                                    <a class="item_link  disable_icon" <?php if($val_menu['name'] == 'Blog') {?> href="<?=base_url()?>tag/<?=$val_menu['slug'].'-'.$val_menu['id']?>" <?php }else{?> href="<?=base_url().$val_menu['slug'].'-'.$val_menu['id']?>"<?php } ?>>
+                                                                        <i class=""></i>
+                                                                        <span class="link_content">
+                                                                            <span class="link_text"><?=$val_menu['name']?></span>
+                                                                        </span>
+                                                                    </a>
+                                                                    <?php if(!empty($val_menu['sub'] && $val_menu['name'] != 'Blog')) {?>
+                                                                    <ul class="mega_dropdown">
+                                                                        <?php foreach ($val_menu['sub'] as $val_cap1): ?>
+                                                                            <li id="menu-item-3504" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3504 default_dropdown default_style drop_to_right submenu_default_width columns1" style="width:25%;">
+                                                                                <a class="item_link  disable_icon" href="<?=base_url().$val_cap1['slug'].'-'.$val_cap1['id']?>">
+                                                                                    <i class=""></i>
+                                                                                    <span class="link_content">
+                                                                                        <span class="link_text"><?=$val_cap1['name']?></span>
+                                                                                    </span>
+                                                                                </a>
+                                                                                <ul class="mega_dropdown">
+                                                                                    <?php foreach ($val_cap1['sub'] as $val_cap2): ?>
+                                                                                        <li id="menu-item-3505" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3505 default_dropdown default_style drop_to_right submenu_default_width columns1">
+                                                                                            <a class="item_link  disable_icon" href="<?=base_url().$val_cap2['slug'].'-'.$val_cap2['id']?>">
+                                                                                                <i class=""></i>
+                                                                                                <span class="link_content">
+                                                                                                    <span class="link_text"><?=$val_cap2['name']?></span>
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    <?php endforeach ?>
+                                                                                </ul>
+                                                                            </li>
+                                                                        <?php endforeach ?>
+                                                                    </ul>
+                                                                    <?php } ?>
+                                                                </li>
+                                                            <?php endforeach; ?>
+                                                            <?php foreach ($pages as $val_page): ?>
+                                                                <li id="menu-item-3482" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3482 multicolumn_dropdown default_style drop_to_center submenu_default_width columns4">
+                                                                    <a href="<?=base_url()?>pages/<?=$val_page['slug'].'-'.$val_page['id']?>" class="item_link  disable_icon">
+                                                                        <i class=""></i>
+                                                                        <span class="link_content">
+                                                                            <span class="link_text"><?=$val_page['name']?></span>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            <?php endforeach ?>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -525,148 +326,35 @@ body {
                                                 </div>
                                                 <div class="mobile-menu-container">
                                                     <ul id="menu-megamenu" class="nav-menu">
-                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1860 current_page_item menu-item-has-children first menu-item-3265"><a href="index.htm" tppabs="http://demo.roadthemes.com/maroko/">Home</a>
-                                                            <ul class="sub-menu">
-                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3264"><a href="index-5.htm" tppabs="http://demo.roadthemes.com/maroko/home-shop-2/">Home Shop 2</a>
-                                                                </li>
-                                                            </ul>
+                                                        <li>
+                                                            <a href="<?=base_url()?>">Home</a>
                                                         </li>
-                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3482"><a href="index-6.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/">Women</a>
-                                                            <ul class="sub-menu">
-                                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3504"><a href="index-7.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/">Accessories</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3505"><a href="index-8.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/baseball-caps/">Baseball Caps</a>
+                                                        <?php foreach ($menu as $val_menu): ?>
+                                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3482">
+                                                                <a <?php if($val_menu['name'] == 'Blog') {?> href="<?=base_url()?>tag/<?=$val_menu['slug'].'-'.$val_menu['id']?>" <?php }else{?> href="<?=base_url().$val_menu['slug'].'-'.$val_menu['id']?>"<?php } ?>><?=$val_menu['name']?></a>
+                                                                <?php if($val_menu['name'] != 'Blog') {?>
+                                                                <ul class="sub-menu">
+                                                                    <?php foreach ($val_menu['sub'] as $val_cap1): ?>
+                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3504">
+                                                                            <a href="<?=base_url().$val_cap1['slug'].'-'.$val_cap1['id']?>"><?=$val_cap1['name']?></a>
+                                                                            <ul class="sub-menu">
+                                                                                <?php foreach ($val_cap1['sub'] as $val_cap2): ?>
+                                                                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3505">
+                                                                                        <a href="<?=base_url().$val_cap2['slug'].'-'.$val_cap2['id']?>"><?=$val_cap2['name']?></a>
+                                                                                    </li>
+                                                                                <?php endforeach ?>
+                                                                            </ul>
                                                                         </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3506"><a href="index-9.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/gloves-mittens/">Gloves &#038; Mittens</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3507"><a href="index-10.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/skullies-beanies/">Skullies &#038; Beanies</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3509"><a href="index-11.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/accessories/sunglasses/">Sunglasses</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3510"><a href="index-12.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/">Bags</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3511"><a href="index-13.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/backpacks-2/">Backpacks</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3512"><a href="index-14.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/bucket-bags-2/">Bucket Bags</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3513"><a href="index-15.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/bucket-bags-3/">Bucket Bags</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3514"><a href="index-16.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/bags-2/clutches-2/">Clutches</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3515"><a href="index-17.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/">clothings</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3516"><a href="index-18.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/jackets-coats-2/">Jackets &#038; Coats</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3517"><a href="index-19.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/jeans-2/">Jeans</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3518"><a href="index-20.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/shorts-2/">Shorts</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3519"><a href="index-21.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/clothings-2/t-shirts-2/">T-shirts</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3520"><a href="index-22.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/">shoes</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3521"><a href="index-23.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/pumps-2/">Pumps</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3522"><a href="index-24.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/sandals-2/">Sandals</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3523"><a href="index-25.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/sneakers-2/">Sneakers</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3524"><a href="index-26.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/women/shoes-2/wedges-2/">Wedges</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3488"><a href="index-27.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/">Men</a>
-                                                            <ul class="sub-menu">
-                                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3489"><a href="index-28.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/">Bags</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3490"><a href="index-29.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/backpacks/">Backpacks</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3491"><a href="index-30.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/bucket-bags/">Bucket Bags</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3492"><a href="index-31.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/clutches/">Clutches</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3493"><a href="index-32.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/bags/crossbody-bags/">Crossbody Bags</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3494"><a href="index-33.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/">clothings</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3495"><a href="index-34.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/jackets-coats/">Jackets &#038; Coats</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3496"><a href="index-35.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/jeans/">Jeans</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3497"><a href="index-36.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/shorts/">Shorts</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3498"><a href="index-37.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/clothings/t-shirts/">T-shirts</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3499"><a href="index-38.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/">Shoes</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3500"><a href="index-39.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/pumps/">Pumps</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3501"><a href="index-40.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/sandals/">Sandals</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3502"><a href="index-41.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/sneakers/">Sneakers</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-3503"><a href="index-42.htm" tppabs="http://demo.roadthemes.com/maroko/product-category/men/shoes/wedges/">Wedges</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3286"><a href="index-43.htm" tppabs="http://demo.roadthemes.com/maroko/blog/">Blog</a>
-                                                            <ul class="sub-menu">
-                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3291"><a href="#">Blog Layouts</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3287"><a href="-layout=nosidebar.htm" tppabs="http://demo.roadthemes.com/maroko/blog/?layout=nosidebar">None Sidebar</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3289"><a href="-layout=sidebar&sidebar=left.htm" tppabs="http://demo.roadthemes.com/maroko/blog/?layout=sidebar&sidebar=left">Sidebar Left</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3290"><a href="-layout=sidebar&sidebar=right.htm" tppabs="http://demo.roadthemes.com/maroko/blog/?layout=sidebar&sidebar=right">Sidebar Right</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3292"><a href="#">Blog Paes</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3293"><a href="index-44.htm" tppabs="http://demo.roadthemes.com/maroko/author/admin/">Author</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3294"><a href="index-45.htm" tppabs="http://demo.roadthemes.com/maroko/2014/12/">Archive</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3295"><a href="index-46.htm" tppabs="http://demo.roadthemes.com/maroko/category/wordpress/">Category</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3296"><a href="index-47.htm" tppabs="http://demo.roadthemes.com/maroko/tag/travel-2/">Blog Tag</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3298"><a href="#">Post Formats</a>
-                                                                    <ul class="sub-menu">
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-3299"><a href="index-48.htm" tppabs="http://demo.roadthemes.com/maroko/type/audio/">Audio</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-3300"><a href="index-49.htm" tppabs="http://demo.roadthemes.com/maroko/type/gallery/">Gallery</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-3301"><a href="index-50.htm" tppabs="http://demo.roadthemes.com/maroko/type/image/">Image</a>
-                                                                        </li>
-                                                                        <li class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-3302"><a href="index-51.htm" tppabs="http://demo.roadthemes.com/maroko/type/video/">Video</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3304"><a href="index-52.htm" tppabs="http://demo.roadthemes.com/maroko/about-us/">About Us</a>
-                                                        </li>
-                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3305"><a href="index-53.htm" tppabs="http://demo.roadthemes.com/maroko/contact/">Contact</a>
-                                                        </li>
-                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page last menu-item-3328"><a href="index-54.htm" tppabs="http://demo.roadthemes.com/maroko/faqs/">FAQS</a>
-                                                        </li>
+                                                                    <?php endforeach ?>
+                                                                </ul>
+                                                                <?php } ?>
+                                                            </li>
+                                                        <?php endforeach; ?>
+                                                        <?php foreach ($pages as $val_page): ?>
+                                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-3482">
+                                                                <a href="<?=base_url()?>pages/<?=$val_page['slug'].'-'.$val_page['id']?>"><?=$val_page['name']?></a>
+                                                            </li>
+                                                        <?php endforeach ?>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -681,16 +369,12 @@ body {
                             <div class="global-row">
                                 <div class="global-cell">
                                     <div class="top-link">
-                                        <?php
-                                           if($_SERVER['REQUEST_URI'] != '/cart' && $_SERVER['REQUEST_URI'] != '/cart/customer'):
-                                        ?>
-                                            <div class="widget woocommerce widget_shopping_cart">
-                                                <h2 class="widgettitle">Cart</h2>
-                                                <div id="cartMenu"></div>
-                                            </div>
-                                        <?php endif; ?>
-                                            <div class="sidebar-toggler"> <i class="fa fa-bars"></i></div>
-
+                                        <div class="widget woocommerce widget_shopping_cart">
+                                            <h2 class="widgettitle">Cart</h2>
+                                            <div id="cartMenu"></div>
+                                        </div>
+                                        <div class="sidebar-toggler"> <i class="fa fa-bars"></i>
+                                        </div>
                                         <div class="header-search">
                                             <div class="widget woocommerce widget_product_search">
                                                 <h2 class="widgettitle">Search</h2>
@@ -702,28 +386,26 @@ body {
                                                         <input type="hidden" name="post_type" value="product" />
                                                     </div>
                                                 </form>
-                                                <script type="text/javascript">
-                                                    jQuery(document).ready(function() {
-                                                        jQuery("#ws").focus(function() {
-                                                            if (jQuery(this).val() == "Search product...") {
-                                                                jQuery(this).val("");
-                                                            }
-                                                        });
-                                                        jQuery("#ws").focusout(function() {
-                                                            if (jQuery(this).val() == "") {
-                                                                jQuery(this).val("Search product...");
-                                                            }
-                                                        });
-                                                        jQuery("#wsearchsubmit").click(function() {
-                                                            if (jQuery("#ws").val() == "Search product..." || jQuery("#ws").val() == "") {
-                                                                jQuery("#ws").focus();
-                                                                return false;
-                                                            }
-                                                        });
-                                                    });
-                                                </script>
-                                            </div>
-                                        </div>
+                                       <!--  <script type="text/javascript">
+                                            jQuery(document).ready(function() {
+                                                jQuery("#ws").focus(function() {
+                                                    if (jQuery(this).val() == "Search product...") {
+                                                        jQuery(this).val("");
+                                                    }
+                                                });
+                                                jQuery("#ws").focusout(function() {
+                                                    if (jQuery(this).val() == "") {
+                                                        jQuery(this).val("Search product...");
+                                                    }
+                                                });
+                                                jQuery("#wsearchsubmit").click(function() {
+                                                    if (jQuery("#ws").val() == "Search product..." || jQuery("#ws").val() == "") {
+                                                        jQuery("#ws").focus();
+                                                        return false;
+                                                    }
+                                                });
+                                            });
+                                        </script> -->
                                     </div>
                                 </div>
                             </div>
@@ -732,15 +414,13 @@ body {
                 </div>
             </div>
         </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class= "main-container front-page">
-     <div class="page-content">
-        <?php echo $contents; ?>
     </div>
 </div>
+<div class="clearfix"></div>
+</div>
+<?php echo $contents; ?>
 <div class="footer">
-    <div class="footer-top">
+    <!-- <div class="footer-top">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-3 col-sm-6 col-sms-6">
@@ -1149,8 +829,9 @@ body {
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer-middle">
+    </div> -->
+    <!--  -->
+    <!-- <div class="footer-middle">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-3 col-sm-6 col-sms-6">
@@ -1229,7 +910,7 @@ body {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="footer-link">
         <div class="container">
             <div class="logo-footer">
@@ -1239,43 +920,47 @@ body {
             <div class="widget bottom_menu">
                 <div class="menu-bottom-menu-container">
                     <ul id="menu-bottom-menu" class="nav_menu">
-                        <li id="menu-item-2976" class="menu-item menu-item-type-custom menu-item-object-custom first menu-item-2976"><a href="#">Site Map</a>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom first menu-item-2976">
+                            <a href="<?=base_url()?>">Home</a>
                         </li>
-                        <li id="menu-item-2977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2977"><a href="#">Search Terms</a>
-                        </li>
-                        <li id="menu-item-2978" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2978"><a href="#">Advanced Search</a>
-                        </li>
-                        <li id="menu-item-2979" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2979"><a href="#">Orders and Returns</a>
-                        </li>
-                        <li id="menu-item-2980" class="menu-item menu-item-type-custom menu-item-object-custom last menu-item-2980"><a href="#">Contact Us</a>
-                        </li>
-                    </ul>
+                        <?php foreach ($menu as $val_menu): ?>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2977">
+                                <a <?php if($val_menu['name'] == 'Blog') {?> href="<?=base_url()?>tag/<?=$val_menu['slug'].'-'.$val_menu['id']?>" <?php }else{?> href="<?=base_url().$val_menu['slug'].'-'.$val_menu['id']?>"<?php } ?>><?=$val_menu['name']?></a>
+                            </li>
+                        <?php endforeach ?>
+                        <?php foreach ($pages as $val_page): ?>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2977">
+                                <a <?=base_url()?>pages/<?=$val_page['slug'].'-'.$val_page['id']?>><?=$val_page['name']?></a>
+                            </li>
+                        <?php endforeach ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <div class="copyright-info"> Copyright © 2015 <a href="javascript:if(confirm(%27http://www.roadthemes.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.roadthemes.com/%27" tppabs="http://www.roadthemes.com/">Roadthemes.</a> All Rights Reserved</div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="bottom-right">
-                        <a href="payment1.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment1.png"><img src="<?=base_url()?>assets/img/anh/payment1.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment1.png" alt="payment1" />
-                        </a>
-                        <a href="payment2.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment2.png"><img src="<?=base_url()?>assets/img/anh/payment2.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment2.png" alt="payment2" />
-                        </a>
-                        <a href="payment3.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment3.png"><img src="<?=base_url()?>assets/img/anh/payment3.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment3.png" alt="payment3" />
-                        </a>
-                        <a href="payment4.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment4.png"><img src="<?=base_url()?>assets/img/anh/payment4.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment4.png" alt="payment4" />
-                        </a>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="copyright-info"> Copyright © 2015 <a href="javascript:if(confirm(%27http://www.roadthemes.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.roadthemes.com/%27" tppabs="http://www.roadthemes.com/">Roadthemes.</a> All Rights Reserved</div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="bottom-right">
+                            <a href="payment1.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment1.png"><img src="<?=base_url()?>assets/img/anh/payment1.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment1.png" alt="payment1" />
+                            </a>
+                            <a href="payment2.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment2.png"><img src="<?=base_url()?>assets/img/anh/payment2.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment2.png" alt="payment2" />
+                            </a>
+                            <a href="payment3.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment3.png"><img src="<?=base_url()?>assets/img/anh/payment3.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment3.png" alt="payment3" />
+                            </a>
+                            <a href="payment4.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment4.png"><img src="<?=base_url()?>assets/img/anh/payment4.png" tppabs="http://demo.roadthemes.com/maroko/wp-content/uploads/2015/06/payment4.png" alt="payment4" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <div style="clear: both;"></div>
 </div>
 </div>
 <div id="secondary" class="col-xs-12 col-md-3 sidebar-sub">
@@ -1283,14 +968,11 @@ body {
         <h3 class="widget-title"><span>Custom Menu</span></h3>
         <div class="menu-custom-links-container">
             <ul id="menu-custom-links-1" class="menu">
-                <li class="menu-item menu-item-type-post_type menu-item-object-page first menu-item-3532"><a href="http://demo.roadthemes.com/maroko/about-us/">About Us</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3534"><a href="http://demo.roadthemes.com/maroko/contact/">Contact</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3533"><a href="http://demo.roadthemes.com/maroko/blog/">Blog</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page last menu-item-3535"><a href="http://demo.roadthemes.com/maroko/faqs/">FAQS</a>
-                </li>
+                <?php foreach ($pages as $val_page): ?>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page first menu-item-3532">
+                        <a href="<?=base_url()?>pages/<?=$val_page['slug'].'-'.$val_page['id']?>"><?=$val_page['name']?></a>
+                    </li>
+                <?php endforeach ?>
             </ul>
         </div>
     </aside>
@@ -1316,24 +998,28 @@ body {
     </aside>
 </div>
 <div id="back-top" class="hidden-xs hidden-sm hidden-md"></div>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="<?=base_url()?>assets/js/jquery/slick.js"></script>
+<script type="text/javascript" src="<?=base_url()?>assets/js/jquery/trangchu.js"></script>
 <script type="text/javascript" src="<?=base_url()?>assets/js/jquery/price_slider.js"></script>
 <script type='text/javascript'>
     var woocommerce_price_slider_params = {
-        // "currency_symbol": "\u00a3",
-       "currency_symbol": "",
+        "currency_symbol": "\u00a3",
         "currency_pos": "left",
         "min_price": "",
         "max_price": ""
     };
 </script>
 <script type="text/javascript" src="<?=base_url()?>assets/js/jquery/breadcum.js"></script>
-<script type="text/javascript" src="<?=base_url()?>assets/js/jquery/slick.js"></script>
-<script type="text/javascript" src="<?=base_url()?>assets/js/jquery/trangchu.js"></script>
 <!-- cart -->
 <script type="text/javascript" src="<?=base_url()?>assets/cart/cart.js"></script>
 
 <?php echo $scripts_header; ?>
-
+<script type='text/javascript'>
+    var wc_single_product_params = {
+        "i18n_required_rating_text": "Please select a rating",
+        "review_rating_required": "yes"
+    };
+</script>
 </body>
 </html>

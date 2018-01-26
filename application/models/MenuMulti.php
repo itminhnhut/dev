@@ -109,5 +109,29 @@
       return $categories;
     }
 
-  }
-  ?>
+    public function get_row_categories($id){
+      $sql = $this->db->select('*')
+      ->from('menu')
+      ->where('id',$id)
+      ->get();
+      return $sql->row_array();
+    }
+
+    public function breadcums($idParent,$idSubChild,$idChild,$table){
+      if($idChild >0){
+        $cap_2 = $this->get_row_categories($idChild);
+        $cap_1 = $this->get_row_categories($idSubChild);
+        $cap_0 = $this->get_row_categories($idParent);
+        return $query = array('cap_0'=> $cap_0, 'cap_1' => $cap_1, 'cap_2' => $cap_2);
+      }elseif($idSubChild > 0){
+       $cap_1 = $this->get_row_categories($idSubChild);
+       $cap_0 = $this->get_row_categories($idParent);
+       return $query = array('cap_0'=> $cap_0, 'cap_1' => $cap_1);
+     }else{
+       $cap_0 = $this->get_row_categories($idParent);
+       return $query = array('cap_0'=> $cap_0);
+     }
+   }
+
+ }
+ ?>

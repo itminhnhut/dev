@@ -10,7 +10,7 @@
    <div class="form-group col-md-6">
       <label for="status">Menu Pages</label>
       <select class="form-control" name="idPage" id="idPage">
-        <?php 
+        <?php
             foreach($pages as $key =>$value):
         ?>
          <option value="<?php echo $value['id']?>"><?php echo $value['name'] ?></option>

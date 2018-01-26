@@ -8,10 +8,16 @@ class Menu extends CI_Model
 
     public function check($slug,$id)
     {
+      if($slug=='all'){
+        $sql = $this->db->select('id')
+                ->from('menu')
+                ->get();
+      }else{
       $sql = $this->db->select('id')
                 ->from('menu')
                 ->where(array('id'=>$id,'slug'=>$slug))
                 ->get();
+      }
       $rs = $sql->result_array();
       return count($rs);
     }

@@ -1,3 +1,4 @@
+<div class="main-container full-width">
 <header class="entry-header">
    <div class="container">
       <h1 class="entry-title">Shopping Cart</h1>
@@ -5,7 +6,7 @@
 </header>
 <div class="page-content">
    <div class="container">
-      <div class="breadcrumbs"><a href="http://demo.roadthemes.com/maroko">Home</a><span class="separator">&gt;</span><span> Shopping Cart</span>
+      <div class="breadcrumbs"><a href="">Home</a><span class="separator">&gt;</span><span> Shopping Cart</span>
       </div>
       <article id="post-20" class="post-20 page type-page status-publish hentry">
          <div class="entry-content">
@@ -16,7 +17,7 @@
                         <div class="wpb_text_column wpb_content_element ">
                            <div class="wpb_wrapper">
                               <div class="woocommerce">
-                                 <form action="http://demo.roadthemes.com/maroko/cart/" method="post">
+                                 <form action="" method="post">
                                     <?php
                                        $count = count($data);
                                        if($count >0):
@@ -43,10 +44,10 @@
                                        ?>
                                           <tr class="cart_item" id="<?php echo $value['rowid']; ?>">
                                              <td class="product-thumbnail">
-                                                <a href="<?php echo base_url($value['href']) ?>"><img width="115" height="148" src="<?php echo $value['img'] ?>" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="<?php echo $value['img'] ?>" sizes="(max-width: 115px) 100vw, 115px">
+                                                <a href=""><img width="115" height="148" src="<?php echo $value['img'] ?>" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="<?php echo $value['img'] ?>" sizes="(max-width: 115px) 100vw, 115px">
                                                 </a>
                                              </td>
-                                             <td class="product-name"> <a href="<?php echo base_url($value['href']) ?>"><?php echo $value['name'] ?></a>
+                                             <td class="product-name"> <a href=""><?php echo $value['name'] ?></a>
                                              </td>
                                              <td class="product-price"> <span data-product_price="<?php echo $value['price'] ?>" class="amount"><?php echo number_format($value['price']).' VNĐ' ?></span>
                                              </td>
@@ -63,13 +64,11 @@
                                           </td>
                                        </tr>
                                        <?php if($i == $count+1): ?>
-                                          <tr>
-                                             <td></td>
-                                             <td></td>
-                                             <td></td>
-                                             <td></td>
-                                             <td><span id="font_car_total">Tổng Tiền </span></td>
-                                             <td id="font_car_total1"><?php echo number_format($total).' VNĐ' ?></td>
+                                          <tr class="tongtien">
+                                             <td class="product-thumbnail"></td>
+                                             <td class="product-subtotal"></td>
+                                             <td class="tt"><span id="font_car_total">Tổng Tiền </span></td>
+                                             <td id="font_car_total1" colspan="3"><?php echo number_format($total).' VNĐ' ?></td>
                                           </tr>
                                        <?php endif; ?>
                                        <?php endforeach; ?>
@@ -78,8 +77,8 @@
                               </table>
                               <?php  if($count > 0) : ?>
                               <div class="row">
-                                 <div style="float: right;" class="col-xs-2 col-md-2">
-                                    <div class="buttons-cart">
+                                 <div class="col-xs-12 col-md-12">
+                                    <div class="buttons-cart" style="float: right;">
                                        <a class="continue" href="<?php echo base_url('cart/customer'); ?>">Continue Shopping</a>
                                     </div>
                                  </div>
@@ -112,5 +111,6 @@
       <footer class="entry-meta"> </footer>
    </article>
    <div id="comments" class="comments-area"></div>
+</div>
 </div>
 </div>

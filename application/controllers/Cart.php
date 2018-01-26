@@ -9,10 +9,13 @@ class Cart extends CI_Controller
     {
 
         parent::__construct();
+        $this->load->library('javascript');
+        $this->load->model('MenuMulti');
+        $this->load->model('Pages');
         $this->CI =& get_instance();
         $this->csrf = array(
-        'name' => $this->security->get_csrf_token_name(),
-        'hash' => $this->security->get_csrf_hash()
+            'name' => $this->security->get_csrf_token_name(),
+            'hash' => $this->security->get_csrf_hash()
         );
         $this->load->library('cart');
     }
@@ -23,8 +26,11 @@ class Cart extends CI_Controller
 
     public function shopping_cart()
     {
-        $data = $this->cart->contents();
-        $this->template->masterlayoutFondend('layout', 'contents', 'layouts/font_end/cart', array('data'=>$data));
+        $data['menu'] =$this->MenuMulti->get_categories();
+        $arr  = json_decode(json_encode($data['menu']),TRUE);
+        $data['pages'] = $this->Pages->show();
+        $data['content'] = $this->cart->contents();
+        $this->template->masterlayoutFondend('layout', 'contents', 'layouts/font_end/cart', array('menu'=>$arr,'data'=>$data['content'],'pages' => $data['pages']));
     }
 
     public function add()
@@ -38,13 +44,13 @@ class Cart extends CI_Controller
         $href = $this->input->post('href');
 
         $data = array(
-         'id' => $id,
-         'qty' => $quantity,
-         'price' => $price,
-         'img' => $img,
-         'name' => $name,
-         'href' => $href,
-        );
+           'id' => $id,
+           'qty' => $quantity,
+           'price' => $price,
+           'img' => $img,
+           'name' => $name,
+           'href' => $href,
+       );
         $this->cart->insert($data);
         $infoCart = $this->cart->contents();
         MenuCart($infoCart);
@@ -80,7 +86,7 @@ class Cart extends CI_Controller
         $data = array(
           'rowid' => $rowid,
           'qty'   => $qty
-        );
+      );
         $this->cart->update($data);
         $this->load->helper('cart_menu');
         $infoCart = $this->cart->contents();
@@ -89,70 +95,73 @@ class Cart extends CI_Controller
 
     public function customer()
     {
-        $count = count($this->cart->contents());
-        if ($count == 0) {
-            redirect(base_url());
-        } else {
-            if (isset($_POST['submitOrderCart'])) {
-                $name       = $this->security->xss_clean($this->input->post('name'));
-                $address    = $this->security->xss_clean($this->input->post('address'));
-                $email      = $this->security->xss_clean($this->input->post('email'));
-                $sdt        = $this->security->xss_clean($this->input->post('sdt'));
-                $meno       = $this->security->xss_clean($this->input->post('meno'));
+       $data['menu'] =$this->MenuMulti->get_categories();
+       $arr  = json_decode(json_encode($data['menu']),TRUE);
+       $data['pages'] = $this->Pages->show();
+       $count = count($this->cart->contents());
+       if ($count == 0) {
+        redirect(base_url());
+    } else {
+        if (isset($_POST['submitOrderCart'])) {
+            $name       = $this->security->xss_clean($this->input->post('name'));
+            $address    = $this->security->xss_clean($this->input->post('address'));
+            $email      = $this->security->xss_clean($this->input->post('email'));
+            $sdt        = $this->security->xss_clean($this->input->post('sdt'));
+            $meno       = $this->security->xss_clean($this->input->post('meno'));
                 //`name`, `address`, `email`, `sdt`, `meno`, `create_date`
-                $data = array(
+            $data = array(
 
-                  'name'           => $name,
-                  'address'        => $address,
-                  'email'          => $email,
-                  'sdt'            => $sdt,
-                  'meno'           => $meno,
-                  'create_date'    => date('Y-m-d H:i:s')
+              'name'           => $name,
+              'address'        => $address,
+              'email'          => $email,
+              'sdt'            => $sdt,
+              'meno'           => $meno,
+              'create_date'    => date('Y-m-d H:i:s')
 
-                );
-                $this->db->insert('customer', $data);
-                $idCustomer = $this->db->insert_id();
+          );
+            $this->db->insert('customer', $data);
+            $idCustomer = $this->db->insert_id();
 
                 //`idCustomer`, `discount`, `status`
-                $data_bill = array(
+            $data_bill = array(
 
-                  'idCustomer'         => $idCustomer,
-                  'discount'           => 0,
-                  'status'             => 0
+              'idCustomer'         => $idCustomer,
+              'discount'           => 0,
+              'status'             => 0
 
-                );
-                $this->db->insert('bill', $data_bill);
-                $idBill = $this->db->insert_id();
+          );
+            $this->db->insert('bill', $data_bill);
+            $idBill = $this->db->insert_id();
 
                 //`idProduct`, `price`, `quantity`, `idBill`
-                $infoCart = $this->cart->contents();
-                foreach ($infoCart as $key => $value) {
-                      $data = array(
-                            'idProduct'        => $value['id'],
-                            'price'            => $value['price'],
-                            'quantity'         => $value['qty'],
-                            'idBill'           => $idBill
-                      );
+            $infoCart = $this->cart->contents();
+            foreach ($infoCart as $key => $value) {
+              $data = array(
+                'idProduct'        => $value['id'],
+                'price'            => $value['price'],
+                'quantity'         => $value['qty'],
+                'idBill'           => $idBill
+            );
 
-                      $this->db->insert('cart', $data);
-                }
-                if ($this->db->trans_status() === true) {
-                    $this->cart->destroy();
-                    redirect(base_url());
-         }
-            } else {
-                $this->template->masterlayoutFondend('layout', 'contents', 'layouts/font_end/customer', array('csrf'=>$this->csrf));
-            }
+              $this->db->insert('cart', $data);
+          }
+          if ($this->db->trans_status() === true) {
+            $this->cart->destroy();
+            redirect(base_url());
         }
+    } else {
+        $this->template->masterlayoutFondend('layout', 'contents', 'layouts/font_end/customer', array('menu'=>$arr,'csrf'=>$this->csrf,'pages'=>$data['pages']));
     }
+}
+}
 
-    public function destroyCustomer()
-    {
-        $this->cart->destroy();
-        redirect(base_url());
-    }
-    public function sendmailOrrder()
-    {
+public function destroyCustomer()
+{
+    $this->cart->destroy();
+    redirect(base_url());
+}
+public function sendmailOrrder()
+{
       //Load email library
     $this->load->library('email');
 

@@ -46,3 +46,12 @@
 .form-create-product .form-select{padding-left: 0px !important;}
 .productImage tr td.image-thumb{width: 150px !important;}
 .productImage tr td.image-thumb.img-thumbnail{width: 90px !important;height: auto !important;}
+
+/*index*/
+.container-fluid .index_admin{
+  padding-bottom: 20px;
+}
+.container-fluid .index_admin h1{
+  text-transform: uppercase;
+  text-align: center;
+}

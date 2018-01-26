@@ -55,7 +55,7 @@
             $idSubChild    =  $this->security->xss_clean($this->input->post('idSubChild'));
             $idChild       =  $this->security->xss_clean($this->input->post('idChild'));
             $des           =  $this->security->xss_clean($this->input->post('des'));
-            $content       =  $this->security->xss_clean($this->input->post('content'));
+            $content       =  htmlspecialchars_decode($this->security->xss_clean(htmlentities($this->input->post('content'))));
             $keyword       =  $this->security->xss_clean($this->input->post('keyword'));
             $description   =  $this->security->xss_clean($this->input->post('description'));
             $tags          =  $this->security->xss_clean($this->input->post('tags'));
@@ -89,7 +89,7 @@
 
          }
          else {
-            $this->template->load('layout', 'contents' , 'ci-admin/product/create.php',array('dataMenu'=>$array,'csrf'=>$this->csrf));
+            //$this->template->load('layout', 'contents' , 'ci-admin/product/create.php',array('dataMenu'=>$array,'csrf'=>$this->csrf));
          }
 
       }

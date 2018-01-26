@@ -120,9 +120,8 @@ else:
                 <ul class="nav">
                   <li><a href="<?php echo base_url('ci-admin/pages'); ?>" class="">Pages</a></li>
                   <li><a href="<?php echo base_url('ci-admin/page/create'); ?>" class="">Create Page</a></li>
-                  <li><a href="<?php echo base_url('ci-admin/content/page'); ?>" class="">Content Pages</a></li>
                   <li><a href="<?php echo base_url('ci-admin/page/content/create'); ?>" class="">Create Content Page</a></li>
-                  
+
                 </ul>
               </div>
             </li>
@@ -287,9 +286,9 @@ else:
       $('#dataPagesContents').DataTable( {
         "ajax": "<?php echo base_url('ci-admin/pages/dataPagesContents') ?>"
       });
-      
+
       /**
-       * 
+       *
        */
       $("#dataPagesContents").on("click", ".pagescontentdelete #pagescontentdelete", function(){
         var table = $('#dataPagesContents').DataTable();
@@ -318,7 +317,7 @@ else:
       });
 
       /**
-       * 
+       *
        */
       $("#dataPages").on("click", ".pagedelete #pagedelete", function(){
         var table = $('#dataPages').DataTable();

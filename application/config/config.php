@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
  */
-$config['base_url'] = 'http://nhut-ci.dev';
+$config['base_url'] = 'http://ciapplycation.vn/';
 
 /*
 |--------------------------------------------------------------------------
@@ -491,7 +491,7 @@ if (stripos($_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'], 'ci-admin/upload'
 ) {
 	$config['csrf_protection'] = false;
 } else {
-	$config['csrf_protection'] = false;
+	$config['csrf_protection'] = true;
 }
 
 // if (stripos($_SERVER["REQUEST_URI"],'/ci-admin/remove') === TRUE) {
